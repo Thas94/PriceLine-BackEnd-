@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Hotel1010DBModel3.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bid">
+    <Key>
+      <PropertyRef Name="bid_id" />
+    </Key>
+    <Property Name="bid_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="50" />
+    <Property Name="startDate" Type="varchar" MaxLength="50" />
+    <Property Name="endDate" Type="varchar" MaxLength="50" />
+    <Property Name="numRooms" Type="int" />
+    <Property Name="room_Price" Type="float" />
+    <Property Name="room_Type" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Hotel_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Province" Type="varchar" MaxLength="50" />
+    <Property Name="phone_no" Type="int" />
+    <Property Name="street_Address" Type="varchar" MaxLength="50" />
+    <Property Name="zip_code" Type="int" />
+    <Property Name="website" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="Hotel1010DBModel3StoreContainer">
+    <EntitySet Name="Bid" EntityType="Self.Bid" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

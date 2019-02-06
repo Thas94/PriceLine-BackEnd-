@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Hotel1010DBModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HotelsAddress">
+    <Key>
+      <PropertyRef Name="add_id" />
+    </Key>
+    <Property Name="add_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="Province" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="zip_code" Type="int" />
+    <Property Name="street_Address" Type="varchar(max)" />
+    <Property Name="website" Type="varchar(max)" />
+    <Property Name="rating" Type="int" />
+    <Property Name="phone_no" Type="int" />
+    <Property Name="hotel_id" Type="int" />
+    <Property Name="hotelMan_id" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="Hotel1010DBModel2StoreContainer">
+    <EntitySet Name="HotelsAddress" EntityType="Self.HotelsAddress" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

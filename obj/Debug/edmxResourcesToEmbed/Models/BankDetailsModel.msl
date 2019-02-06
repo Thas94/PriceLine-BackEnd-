@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Hotel1010DBModelStoreContainer" CdmEntityContainer="BankDetailsEntities">
+    <EntitySetMapping Name="BankDetails">
+      <EntityTypeMapping TypeName="Hotel1010DBModel.BankDetail">
+        <MappingFragment StoreEntitySet="BankDetails">
+          <ScalarProperty Name="bank_id" ColumnName="bank_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="acc_holder" ColumnName="acc_holder" />
+          <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+          <ScalarProperty Name="acc_no" ColumnName="acc_no" />
+          <ScalarProperty Name="card_no" ColumnName="card_no" />
+          <ScalarProperty Name="acc_Type" ColumnName="acc_Type" />
+          <ScalarProperty Name="branch_no" ColumnName="branch_no" />
+          <ScalarProperty Name="cvv" ColumnName="cvv" />
+          <ScalarProperty Name="exp_Date" ColumnName="exp_Date" />
+          <ScalarProperty Name="bank_Name" ColumnName="bank_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

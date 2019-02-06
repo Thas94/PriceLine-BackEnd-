@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Hotel1010DBModel3StoreContainer" CdmEntityContainer="BidEntities">
+    <EntitySetMapping Name="Bids">
+      <EntityTypeMapping TypeName="Hotel1010DBModel3.Bid">
+        <MappingFragment StoreEntitySet="Bid">
+          <ScalarProperty Name="bid_id" ColumnName="bid_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="numRooms" ColumnName="numRooms" />
+          <ScalarProperty Name="room_Price" ColumnName="room_Price" />
+          <ScalarProperty Name="room_Type" ColumnName="room_Type" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Hotel_Name" ColumnName="Hotel_Name" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+          <ScalarProperty Name="street_Address" ColumnName="street_Address" />
+          <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+          <ScalarProperty Name="website" ColumnName="website" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

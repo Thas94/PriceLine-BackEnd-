@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Hotel1010DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BankDetails">
+    <Key>
+      <PropertyRef Name="bank_id" />
+    </Key>
+    <Property Name="bank_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="varchar(max)" />
+    <Property Name="acc_holder" Type="varchar" MaxLength="50" />
+    <Property Name="phone_no" Type="int" />
+    <Property Name="acc_no" Type="int" />
+    <Property Name="card_no" Type="int" />
+    <Property Name="acc_Type" Type="varchar" MaxLength="50" />
+    <Property Name="branch_no" Type="int" />
+    <Property Name="cvv" Type="int" />
+    <Property Name="exp_Date" Type="varchar" MaxLength="50" />
+    <Property Name="bank_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="Hotel1010DBModelStoreContainer">
+    <EntitySet Name="BankDetails" EntityType="Self.BankDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

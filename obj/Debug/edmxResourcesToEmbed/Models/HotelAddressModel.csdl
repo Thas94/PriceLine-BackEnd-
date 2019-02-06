@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Hotel1010DBModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="HotelsAddress">
+    <Key>
+      <PropertyRef Name="add_id" />
+    </Key>
+    <Property Name="add_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Province" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="zip_code" Type="Int32" />
+    <Property Name="street_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="website" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rating" Type="Int32" />
+    <Property Name="phone_no" Type="Int32" />
+    <Property Name="hotel_id" Type="Int32" />
+    <Property Name="hotelMan_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="HotelAddressEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HotelsAddresses" EntityType="Self.HotelsAddress" />
+  </EntityContainer>
+</Schema>

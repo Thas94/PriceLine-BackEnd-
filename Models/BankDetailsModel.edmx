@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Hotel1010DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BankDetails">
+          <Key>
+            <PropertyRef Name="bank_id" />
+          </Key>
+          <Property Name="bank_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_id" Type="varchar(max)" />
+          <Property Name="acc_holder" Type="varchar" MaxLength="50" />
+          <Property Name="phone_no" Type="int" />
+          <Property Name="acc_no" Type="int" />
+          <Property Name="card_no" Type="int" />
+          <Property Name="acc_Type" Type="varchar" MaxLength="50" />
+          <Property Name="branch_no" Type="int" />
+          <Property Name="cvv" Type="int" />
+          <Property Name="exp_Date" Type="varchar" MaxLength="50" />
+          <Property Name="bank_Name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="Hotel1010DBModelStoreContainer">
+          <EntitySet Name="BankDetails" EntityType="Self.BankDetails" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Hotel1010DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BankDetail">
+          <Key>
+            <PropertyRef Name="bank_id" />
+          </Key>
+          <Property Name="bank_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="acc_holder" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phone_no" Type="Int32" />
+          <Property Name="acc_no" Type="Int32" />
+          <Property Name="card_no" Type="Int32" />
+          <Property Name="acc_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="branch_no" Type="Int32" />
+          <Property Name="cvv" Type="Int32" />
+          <Property Name="exp_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bank_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="BankDetailsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BankDetails" EntityType="Self.BankDetail" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Hotel1010DBModelStoreContainer" CdmEntityContainer="BankDetailsEntities">
+          <EntitySetMapping Name="BankDetails">
+            <EntityTypeMapping TypeName="Hotel1010DBModel.BankDetail">
+              <MappingFragment StoreEntitySet="BankDetails">
+                <ScalarProperty Name="bank_id" ColumnName="bank_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="acc_holder" ColumnName="acc_holder" />
+                <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+                <ScalarProperty Name="acc_no" ColumnName="acc_no" />
+                <ScalarProperty Name="card_no" ColumnName="card_no" />
+                <ScalarProperty Name="acc_Type" ColumnName="acc_Type" />
+                <ScalarProperty Name="branch_no" ColumnName="branch_no" />
+                <ScalarProperty Name="cvv" ColumnName="cvv" />
+                <ScalarProperty Name="exp_Date" ColumnName="exp_Date" />
+                <ScalarProperty Name="bank_Name" ColumnName="bank_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
